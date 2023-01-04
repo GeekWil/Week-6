@@ -1,0 +1,61 @@
+ser1 = input()
+ser2 = input()
+
+m1 = ""      #going to be the fee for service 1
+m2 = ""      #going to be the fee for service 2
+
+
+print("Davy's auto shop services")
+print("Oil change -- $35")
+print("Tire rotation -- $19")
+print("Car wash -- $7")
+print("Car wax -- $12")
+print()
+print("Select first service:")
+print("Select second service:")
+
+
+if ser1 == "Oil change":
+    m1 = "35"
+if ser1 == "Tire rotation":
+    m1 = "19"
+    
+if ser2 == "Car wash":
+    m2 = "7"
+if ser2 == "Car wax":
+    m2 = "12"
+    
+if ser1 == "-":
+    m1 = "No service"
+    ser1 = ""
+if ser2 == "-":
+    m2 = "No service"
+    ser2 = ""
+
+
+total = 0
+
+if m1 == "No service":
+    total = m2
+elif m2 == "No service":
+    total = m1
+else:
+    total = int(m1) + int(m2)
+
+
+
+
+
+print()
+print("Davy's auto shop invoice")
+print()
+if total == m2:
+    print(f'Service 1: {m1}')
+else:
+    print(f'Service 1: {ser1}, ${m1}')
+if total == m1:
+    print(f'Service 2: {m2}')
+else:
+    print(f'Service 2: {ser2}, ${m2}')
+print()
+print(f'Total: ${total}')

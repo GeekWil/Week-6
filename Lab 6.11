@@ -1,0 +1,20 @@
+R = int(input())
+G = int(input())
+B = int(input())
+
+#determine which one is the smallest number
+
+if R < G and R < B:
+    G = G - R
+    B = B - R
+    R = 0
+elif G < R and G < B:
+    R = R - G
+    B = B - G
+    G = 0
+else:
+    R = R - B
+    G = G - B
+    B = 0
+
+print(R,G,B)
